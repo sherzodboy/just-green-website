@@ -256,3 +256,65 @@ img {
     background-color:#41C365;
     color: #fff;
 }
+.up {
+  position: fixed;
+  right: 40px;
+  bottom: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  border: 3px solid rgb(5, 71, 5);
+  text-decoration: none;
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.4s linear;
+  display: none;
+}
+.active {
+  display: inline-flex;
+  animation: show 0.25s linear;
+}
+@keyframes show {
+  0% {
+    transform: translateY(60px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  110% {
+    transform: translateY(0);
+  }
+}
+.up:hover {
+  background: rgb(9, 170, 17);
+}
+.up:hover .up-icon {
+  color:rgb(255, 255, 255)
+}
+.up-icon {
+  font-size: 26px;
+  color:rgb(5, 71, 5)
+}
+.up-icon {
+  transition: all 0.2s linear;
+}
+.up:hover .aaa {
+  transform: translateY(-60px);
+  transition: all 0.25s linear;
+}
+.up:hover .fff {
+  transform: none;
+  transition: all 0.25s linear;
+  opacity: 1;
+}
+.fff {
+  position: absolute;
+  font-size: 26px;
+  color:rgb(5, 71, 5);
+  overflow: hidden;
+  transform: translateY(60px);
+  opacity: 0;
+}
